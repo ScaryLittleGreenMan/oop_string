@@ -18,12 +18,28 @@ public class Main {
         System.out.println(c3);
 
         Cat cat = new Cat("Barsik", 5);
-        Plate plate = new Plate(100);
+        Plate plate = new Plate(50);
         //cat.eat();
         plate.plateInfo();
         cat.eat(plate);
         //plate.setFood(plate.getFood() - cat.getAppetite());
         plate.plateInfo();
 
+        // practice
+        System.out.println("||    practice    ||");
+        plate.printPlateInfo();
+
+        Cat [] catsArray = new Cat[5];
+        catsArray[0] = new Cat("Барсик");
+        catsArray[1] = new Cat("Василий");
+        catsArray[2] = new Cat("Мурка");
+        catsArray[3] = new Cat("Ластик");
+        catsArray[4] = new Cat("Шерхан");
+
+        for (int i = 0; i < catsArray.length; i++) {
+            catsArray[i].eat(plate);
+            plate.plateInfo();
+
+        }
     }
 }
