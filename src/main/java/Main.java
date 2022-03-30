@@ -13,10 +13,17 @@ public class Main {
         System.out.println(c2);
         String c3 = "Десять = " + (5 + 5);
         System.out.println(c3);
-        int n=200; //преобразование примитивов в строку
-        c3=String.valueOf(n);
+        int n = 200; //преобразование примитивов в строку
+        c3 = String.valueOf(n);
         System.out.println(c3);
 
+        Cat cat = new Cat("Barsik", 5);
+        Plate plate = new Plate(100);
+        //cat.eat();
+        plate.plateInfo();
+        cat.eat(plate);
+        //plate.setFood(plate.getFood() - cat.getAppetite());
+        plate.plateInfo();
 
     }
 }
