@@ -13,11 +13,19 @@ public class Plate {
         return food;
     }
 
-    public void plateInfo() {
+    public int plateInfo() {
         System.out.println("Plate: " + food);
+        return food;
     }
 
-    public void decreaseFood(int n) {
-        food -= n;
+    public void decreaseFood(int appetite) {
+        if(food-appetite<=0){
+            System.out.println("В миске слишком мало еды!!! Котику не хватит!");
+        }
+        food -= appetite;
+    }
+
+    public void printPlateInfo() {
+        System.out.println("Количество еды в миске " + food);
     }
 }
